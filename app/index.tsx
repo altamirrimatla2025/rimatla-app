@@ -1,0 +1,44 @@
+import { Image, StyleSheet, Text, View } from "react-native";
+
+export default function Index() {
+  return (
+    <View style={styles.container}>
+    <Image
+    source={require("@/assets/images/pizza.png" )}
+    style={styles.illustration}
+      />
+
+      <Text style={styles.title}> PIZZA HUSTH </Text>
+      <Text style={styles.subtitle}> Acesse sua conta com email
+         e senha.</Text>
+      </View>
+    
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#FDFDFD",
+    padding: 32,
+
+  },
+  illustration: {
+    width: "100%",
+    height: 330,
+    resizeMode: "contain",
+    marginTop: 64,
+  },
+
+title: {
+  fontSize: 24,
+  fontWeight: "bold",
+  textAlign: "center",
+},
+subtitle: {
+  fontSize: 16,
+  textAlign: "center",
+  color: "#666",
+}
+})
+
