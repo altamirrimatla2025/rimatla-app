@@ -1,7 +1,8 @@
-import { Image, StyleSheet, Text, View } from "react-native";
-
+import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Input } from "../app-example/components/components/input";
 export default function Index() {
   return (
+    <ScrollView>
     <View style={styles.container}>
     <Image
     source={require("@/assets/images/pizza.png" )}
@@ -9,9 +10,15 @@ export default function Index() {
       />
 
       <Text style={styles.title}> PIZZA HUSTH </Text>
-      <Text style={styles.subtitle}> Acesse sua conta com email
-         e senha.</Text>
+      <Text style={styles.subtitle}> Acesse sua conta com email e senha.</Text>
+
+      <View style={styles.form}>
+        <Input placeholder="E-mail" keyboardType="email-address"/>
+        <Input placeholder="Senha" secureTextEntry />
+
       </View>
+      </View>
+      </ScrollView>
     
   );
 }
@@ -39,6 +46,11 @@ subtitle: {
   fontSize: 16,
   textAlign: "center",
   color: "#666",
-}
+  },
+
+  form: {
+    width: "100%",
+    padding: 20,
+  },
 })
 
