@@ -1,3 +1,4 @@
+import { Button } from "@/app-example/components/components/Button";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { Input } from "../app-example/components/components/input";
 export default function Index() {
@@ -15,6 +16,7 @@ export default function Index() {
       <View style={styles.form}>
         <Input placeholder="E-mail" keyboardType="email-address"/>
         <Input placeholder="Senha" secureTextEntry />
+        <Button label="ENTRAR" />
 
       </View>
       </View>
